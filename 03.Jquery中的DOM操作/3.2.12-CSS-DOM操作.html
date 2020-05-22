@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>遍历节点</title>
+
+<script src="../script/jquery-1.9.1.js" type="text/javascript"></script>
+<script>
+$(function(){
+      //获取<p>元素的color
+      $("input:eq(0)").click(function(){
+			alert(  $("p").css("color") );
+	  });
+      //设置<p>元素的color
+	  $("input:eq(1)").click(function(){
+			 $("p").css("color","red")
+	  });
+      //设置<p>元素的fontSize和backgroundColor
+	  $("input:eq(2)").click(function(){
+			 $("p").css({"fontSize":"30px" ,"backgroundColor":"#888888"}) //驼峰式
+	  });    
+	  //获取<p>元素的高度
+	  $("input:eq(3)").click(function(){
+			  alert( $("p").height() );
+	  });  
+	  //获取<p>元素的宽度
+	  $("input:eq(4)").click(function(){
+			  alert( $("p").width() );
+	  });   
+
+	   //设置<p>元素的高度
+	  $("input:eq(5)").click(function(){
+			  $("p").height("100px");
+	  });  
+	  //设置<p>元素的宽度
+	  $("input:eq(6)").click(function(){
+			  $("p").width("400px");
+	  }); 
+	   //设置<p>元素的透明度
+	  $("input:eq(7)").click(function(){
+			  $("p").css("opacity","0.5");
+	  }); 
+	  
+	  //获取<p>元素的的左边距和上边距
+	  $("input:eq(8)").click(function(){
+			  var offset = $("p").offset();
+			  var left = offset.left;
+			  var top =  offset.top;
+		      alert("left:"+left+";top:"+top);
+	  });  
+	   //position()方法
+	  $("input:eq(9)").click(function(){
+			  var position = $("p").position();
+			  var left = position.left;
+			  var top =  position.top;
+		      alert("left:"+left+";top:"+top);
+	  });  
+	   //scrollTop()方法、scrollLeft()方法：获取元素的滚动条距离顶端和左侧的距离
+	  $("input:eq(10)").click(function(){
+			  var scrollTop =  $("textarea").scrollTop(); //滚动条距离顶端的距离
+			  var scrollLeft = $("textarea").scrollLeft();	//滚动条距离左端的距离		  
+		      alert("scrollTop:"+scrollTop+";scrollLeft:"+scrollLeft);
+	  });  
+	   //控制元素的滚动条滚动到距离顶端300和距离左侧300的位置
+	  $("input:eq(11)").click(function(){
+			  $("textarea").scrollTop(300);
+			  $("textarea").scrollLeft(300);
+	  });  
+  });
+
+</script>
+
+</head>
+<body>
+<input type="button" value="获取<p>元素的color"/>
+	<input type="button" value="设置<p>元素的color"/>
+	<input type="button" value="设置<p>元素的fontSize和backgroundColor"/>
+	<input type="button" value="获取<p>元素的高度"/>
+	<input type="button" value="获取<p>元素的宽度"/>
+	<input type="button" value="设置<p>元素的高度"/>
+	<input type="button" value="设置<p>元素的宽度"/>
+	<input type="button" value="设置<p>元素的透明度"/>
+	<input type="button" value="获取<p>元素的的左边距和上边距"/>
+    <input type="button" value="position()方法"/>
+    <input type="button" value="获取元素的滚动条距离顶端和左侧的距离"/>
+    <input type="button" value="控制元素的滚动条滚动到距离顶端300和距离左侧300的位置"/>
+
+
+	<p title="选择你最喜欢的水果."><strong>你最喜欢的水果是?</strong></p>
+	<ul>
+	  <li title='苹果'>苹果</li>
+	  <li title='橘子'>橘子</li>
+	  <li title='菠萝'>菠萝</li>
+	</ul>
+
+	<textarea name="test" cols="40" rows="10">这是一个文本输入区域（如果这里文本足够多的话，上面测试的 控制元素的滚动条滚动到距离顶端300和距离左侧300的位置就会显示出来） ....</textarea>
+</body>
+</html>
+
+ 

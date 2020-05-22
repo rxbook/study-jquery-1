@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>替换节点</title>
+<script src="../script/jquery-1.9.1.js" type="text/javascript"></script>
+<script>
+$(function(){
+	$("p").replaceWith("<strong>你最不喜欢的水果是什么？</strong>");
+	$("<font color=red>或许会吧，我一定会坚持！</font>").replaceAll("span");
+}) 
+</script>
+
+</head>
+<body>
+
+	<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+    <br>
+    <span>如果努力，是否一定会成功？</span>
+	<ul>
+	  <li title='苹果'>1苹果</li>
+	  <li title='橘子'>2橘子</li>
+	  <li title='菠萝'>3菠萝</li>
+      <li title='aaa'>4aaa</li>
+	  <li title='bbb'>5bbb</li>
+	  <li title='ccc'>6ccc</li>
+	</ul>
+
+</body>
+</html>
+
+ 

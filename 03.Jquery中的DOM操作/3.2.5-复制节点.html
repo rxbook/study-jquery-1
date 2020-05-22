@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>复制节点</title>
+<script src="../script/jquery-1.9.1.js" type="text/javascript"></script>
+<script>
+$(function(){
+	$("ul li").click(function(){
+		//$(this).clone().appendTo("ul");//复制当前click的节点，并将它复制到<ul>元素中
+		//（此处复制的节点不能再执行此事件，若要可以需要有参数true） 
+		$(this).clone(true).appendTo("ul");
+	})
+}) 
+</script>
+
+</head>
+<body>
+
+	<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+	<ul>
+	  <li title='苹果'>1苹果</li>
+	  <li title='橘子'>2橘子</li>
+	  <li title='菠萝'>3菠萝</li>
+      <li title='aaa'>4aaa</li>
+	  <li title='bbb'>5bbb</li>
+	  <li title='ccc'>6ccc</li>
+	</ul>
+
+</body>
+</html>
+
+ 

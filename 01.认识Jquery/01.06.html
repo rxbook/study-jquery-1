@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<!-- 引入 jQuery -->
+<script src="../script/jquery-1.9.1.js" type="text/javascript"></script>
+<script>
+/*通过DOM对象判断选框是否被选中*/
+$(document).ready(function(){
+	var $test_dom = $("#test_dom"); //jquery对象
+	var test_dom = $test_dom.get(0); //DOM对象
+	$test_dom.click(function(){
+		if(test_dom.checked){
+			//使用DOM方式判断
+			alert("使用DOM对象....."); 
+		}
+	});
+});
+
+/*通过Jquery对象判断选框是否被选中*/
+$(document).ready(function(){
+	var $test_jquery = $("#test_jquery"); //jquery对象
+	$test_jquery.click(function(){
+		if($test_jquery.is(":checked")){
+			//使用jquery方式判断
+			alert("使用Jquery对象.....");
+		}
+	});
+});
+
+
+</script>
+</head>
+
+<body>
+<input type="checkbox" id="test_dom" />使用DOM测试的选框 <br><br>
+<input type="checkbox" id="test_jquery" />使用Jquery测试的选框
+</body>
+</html>

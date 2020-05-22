@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>属性操作</title>
+<script src="../script/jquery-1.9.1.js" type="text/javascript"></script>
+<script>
+$(function(){	
+	//设置单个属性
+	$("p").attr("title","任兴是个好孩子！");	
+	//设置多个属性
+	$("h2").attr({"title":"任兴好好奋斗！","align":"right"});	
+	//删除属性
+	$(".s2").removeAttr("title");	
+	//获取属性
+	var $para=$(".s1"); //获取.s1
+	alert($para.attr("title")); 弹出元素节点的属性	
+}) 
+</script>
+
+</head>
+<body>
+	<p title="选择你最喜欢的水果.">你最喜欢的水果是?</p>
+    <br>
+    <span class="s1" title="如果努力....">如果努力，是否一定会成功？</span>
+    <br>
+    <span class="s2" title="测试删除属性">让泪化作相思雨</span>
+    <br>
+	<h2 title="测试设置多个属性" align="center">设置多个属性</h2>
+    
+    <ul>
+	  <li title='苹果'>1苹果</li>
+	  <li title='橘子'>2橘子</li>
+	  <li title='菠萝'>3菠萝</li>
+      <li title='aaa'>4aaa</li>
+	  <li title='bbb'>5bbb</li>
+	  <li title='ccc'>6ccc</li>
+	</ul>
+</body>
+</html>
+
+ 
